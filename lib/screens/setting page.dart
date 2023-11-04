@@ -30,10 +30,13 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: darkMode ? ThemeData.dark() : ThemeData.light(),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Settings'),
+        appBar: AppBar(backgroundColor: Colors.black26,
+         leading: IconButton(onPressed: ()=>Navigator.of(context).pop(),
+             icon: Icon(Icons.arrow_back)),
+        title: Text('Settings'),
         ),
         body: ListView(
           padding: EdgeInsets.all(16.0),
